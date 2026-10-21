@@ -1,0 +1,58 @@
+{
+  "comentario": "Herramientas externas con version fijada. Las descarga build.ps1 -SoloHerramientas en tools\\ (fuera de git). Se actualizan a mano, revisando cada hash.",
+  "herramientas": [
+    {
+      "nombre": "exiftool",
+      "uso": "ejecucion",
+      "version": "13.59",
+      "archivo": "exiftool-13.59_64.zip",
+      "url": "https://sourceforge.net/projects/exiftool/files/exiftool-13.59_64.zip/download",
+      "origen": "exiftool.org enlaza sus descargas a SourceForge (la web de exiftool.org esta deshabilitada por su hosting)",
+      "sha256": "44b512b25af500724ba579d0a53c8fc5851628b692dd5e5d94ae4a15c2cba9ec",
+      "origen_hash": "https://exiftool.org/checksums.txt (SHA2-256 de exiftool-13.59_64.zip)",
+      "licencia": "Libre, mismos terminos que Perl (Artistic License o GPL)",
+      "destino": "exiftool",
+      "ejecutable": "exiftool.exe"
+    },
+    {
+      "nombre": "c2patool",
+      "uso": "solo tests (nunca en el exe)",
+      "version": "0.27.22",
+      "archivo": "c2patool-v0.27.22-x86_64-pc-windows-msvc.zip",
+      "url": "https://github.com/contentauth/c2pa-rs/releases/download/c2patool-v0.27.22/c2patool-v0.27.22-x86_64-pc-windows-msvc.zip",
+      "origen": "releases oficiales de contentauth/c2pa-rs en GitHub",
+      "sha256": "2e6808719b5610f9ab096857f600f16938fda3c7388de3829f0dea1c2a345011",
+      "origen_hash": "digest SHA-256 que publica GitHub para el asset de la release",
+      "licencia": "MIT OR Apache-2.0",
+      "destino": "c2patool",
+      "ejecutable": "c2patool.exe"
+    }
+  ],
+  "muestras_c2pa": {
+    "uso": "solo tests (lectores independientes); destino tools\\c2pa-muestras\\",
+    "fuentes": [
+      {
+        "repo": "c2pa-org/public-testfiles",
+        "commit": "22beccc075707475b038d8789d0136c009e43143",
+        "licencia": "CC-BY-SA-4.0 (Coalition for Content Provenance and Authenticity)",
+        "archivos": [
+          {"ruta": "legacy/1.4/image/jpeg/adobe-20220124-C.jpg", "git_blob": "4b8df5e273c9694f4f9287e2064b66c2d3d33574", "sha256": "75a8da33f6eaf1e16bf3b42cd78913b22b2e6a671fda217a508b1ba4230ce864"},
+          {"ruta": "legacy/1.4/image/jpeg/adobe-20220124-CA.jpg", "git_blob": "c0fc9ac13155427f8111e7b1d24bdbcebf59a8a3", "sha256": "cafc48c53e651f7ba4622d1f72783827074211e42b9634cc863ec3be3c7651b3"},
+          {"ruta": "legacy/1.4/image/jpeg/adobe-20220124-CACA.jpg", "git_blob": "4a6925893ca2cb7eb7fe6e697e7073cdae99039d", "sha256": "cd2f56e195567b8bc4ec2a32bceb6577dcc3a0cf73e5e185c9289e2cc9c70629"},
+          {"ruta": "legacy/1.4/image/jpeg/adobe-20220124-CIE-sig-CA.jpg", "git_blob": "957c373dddf76f12e7efc99e66f4a4a9c51c6c06", "sha256": "9179857be72dd627ab192ee88776885ce07a31353a627f3d09ccf296bfe068ba"},
+          {"ruta": "legacy/1.4/image/jpeg/adobe-20220124-E-uri-CA.jpg", "git_blob": "8f57168cc9e41b348f01fb24425ab9c9e6c1da42", "sha256": "56014faf6b97532252c9bb90dcf484923a8aa7bba197e84a8555044a35e4f3a6"}
+        ]
+      },
+      {
+        "repo": "contentauth/c2pa-rs",
+        "commit": "60f7cbdc69ab7a2554fcc87eb4df77050814b2cf",
+        "licencia": "MIT OR Apache-2.0 (licencia del repositorio)",
+        "archivos": [
+          {"ruta": "sdk/tests/fixtures/sample1.png", "git_blob": "cfd2f19ab800fc2516f6ccdc836e4a53a154b6ff", "sha256": "0bd72c972c14e5fd27d8473c5599e801031576e1398f384c40c3394696a2619a"},
+          {"ruta": "sdk/tests/fixtures/libpng-test_with_url.png", "git_blob": "3b2e50770bdab72eafa5b2f73dcba331c36dc17f", "sha256": "8ffdf61c6497696b4a18f8e04b416c749f7ad67f4a1529862f50231db86d1411"},
+          {"ruta": "sdk/tests/fixtures/libpng-test.png", "git_blob": "c4af2adab658ac99602f0a1318f6d0b9fa75ac7a", "sha256": "c5c635a1dbbec9a768c3bb4527dbaea62a1be05efcee17d66799cc07b673b29b"}
+        ]
+      }
+    ]
+  }
+}

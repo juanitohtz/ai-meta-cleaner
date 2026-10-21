@@ -1,0 +1,27 @@
+# Secretos
+.env
+*.env
+!.env.example
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Builds
+build/
+dist/
+*.log
+# Herramientas descargadas (ExifTool, FFmpeg)
+/tools/
+# Archivos reales de IA para la prueba final
+/muestras/
+# Multimedia
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.wav
+*.mkv
+*.opus
+*.flac

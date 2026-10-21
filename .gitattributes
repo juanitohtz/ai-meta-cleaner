@@ -1,0 +1,3 @@
+# El SVG y el .ico se comparan byte a byte con lo que genera assets/generar_icono.py
+assets/*.svg text eol=lf
+assets/*.ico binary
